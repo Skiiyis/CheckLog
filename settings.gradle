@@ -1,0 +1,3 @@
+include ':app'
+include 'check-log-plugin'
+rootProject.name = "CheckLog"

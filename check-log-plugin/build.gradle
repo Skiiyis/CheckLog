@@ -1,0 +1,36 @@
+apply plugin: 'maven-publish'
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.android.tools.build:gradle:3.4.0'
+    implementation 'com.android.tools.build:gradle-api:3.4.0'
+    implementation 'commons-io:commons-io:2.6'
+    implementation 'commons-codec:commons-codec:1.10'
+    //noinspection GradleDependency
+    implementation 'org.ow2.asm:asm:5.1'
+    //noinspection GradleDependency
+    implementation 'org.ow2.asm:asm-util:5.1'
+    //noinspection GradleDependency
+    implementation 'org.ow2.asm:asm-commons:5.1'
+    implementation 'com.quinn.hunter:hunter-transform:0.9.0'
+}
+
+repositories {
+    mavenLocal()
+    google()
+    jcenter()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId "com.github.skiiyis"
+            artifactId "check-log-plugin"
+            version "0.1.0-SNAPSHOT"
+
+            from components.java
+        }
+    }
+}
