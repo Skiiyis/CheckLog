@@ -66,21 +66,44 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:src="@drawable/carbon2"
-            app:layout_constraintDimensionRatio="H,1662:784"
+            app:layout_constraintDimensionRatio="H,1710:676"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/subtitle3" />
+
+        <TextView
+            android:id="@+id/subtitle10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:text="需要注意替换后的类需要实现被替换类的被替换的方法同样的方法签名"
+            android:typeface="monospace"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawable1" />
+
+        <ImageView
+            android:id="@+id/drawable3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/carbon3"
+            app:layout_constraintDimensionRatio="H,1262:1360"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subtitle10" />
 
         <TextView
             android:id="@+id/subtitle4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:textColor="@android:color/black"
+            android:layout_marginTop="40dp"
             android:text="核心原理"
+            android:textColor="@android:color/black"
             android:typeface="monospace"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/drawable1" />
+            app:layout_constraintTop_toBottomOf="@+id/drawable3" />
 
         <TextView
             android:id="@+id/subtitle5"
@@ -99,7 +122,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/carbon"
-            app:layout_constraintDimensionRatio="H,1662:784"
+            app:layout_constraintDimensionRatio="H,1550:640"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/subtitle4" />
