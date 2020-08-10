@@ -22,10 +22,16 @@ class CheckLogTransform(
         isIncremental: Boolean
     ) {
         val variant = context?.variantName
-        if (variant?.contains("release") == true) {
-            this.bytecodeWeaver = CheckLogByteCodeWeaver(extension.release)
-        } else if (variant?.contains("debug") == true) {
-            this.bytecodeWeaver = CheckLogByteCodeWeaver(extension.debug)
+        when {
+            variant?.toLowerCase()?.contains("release") == true -> {
+                this.bytecodeWeaver = CheckLogByteCodeWeaver(extension.release)
+            }
+            variant?.toLowerCase()?.contains("debug") == true -> {
+                this.bytecodeWeaver = CheckLogByteCodeWeaver(extension.debug)
+            }
+            else -> {
+                throw IllegalArgumentException("unsupport variant, current variant is $variant")
+            }
         }
         super.transform(context, inputs, referencedInputs, outputProvider, isIncremental)
     }
